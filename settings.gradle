@@ -11,4 +11,4 @@ plugins {
 }
 
 rootProject.name = 'micronaut-bug'
-include('app', 'list', 'utilities')
+include('app', 'utilities')
