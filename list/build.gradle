@@ -1,0 +1,33 @@
+plugins {
+    id 'io.micronaut.application' version '4.5.0'
+}
+
+micronaut {
+    runtime("netty")
+    testRuntime("junit5")
+    processing {
+        incremental(true)
+        annotations("org.example.*")
+    }
+}
+
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    runtimeOnly("org.yaml:snakeyaml")
+    implementation("io.micronaut:micronaut-runtime")
+
+    implementation(project(":utilities"))
+}
+
+application {
+    mainClass.set("org.example.Application")
+}
+
+java {
+    sourceCompatibility = JavaVersion.toVersion("21")
+    targetCompatibility = JavaVersion.toVersion("21")
+}
