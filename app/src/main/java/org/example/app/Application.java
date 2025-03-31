@@ -1,4 +1,4 @@
-package org.example.list;
+package org.example.app;
 
 import io.micronaut.runtime.Micronaut;
 

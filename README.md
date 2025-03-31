@@ -32,7 +32,7 @@ This project is designed to:
 ## 🚀 How to Reproduce
 
 1. Clone this repository.
-2. Run the application using `./gradlew :list:run`.
+2. Run the application using `./gradlew :app:run`.
 3. Observe that configuration values defined in the application’s `application.yaml` are **missing or overridden**. This will be printed out on application start up. 
 4. Comment out the dependency on the `utilities` module and rerun the application — your config now takes effect as expected.
 
@@ -59,16 +59,16 @@ This behavior is unintuitive and easy to miss. It can:
 
 ## Project Structure
 
-- `list`: The main application module.
+- `app`: The main application module.
 - `utilities`: A simple library module.
 
 ## Configuration
 
 Both modules have their own `application.yml` files located in their respective `src/main/resources` directories.
 
-### `list` Module
+### `app` Module
 
-The `list` module contains the main application. It includes a class `OnStartUp` that reads a configuration value from the `application.yml` file and prints it to the console when the application starts.
+The `app` module contains the main application. It includes a class `ConfigurationPrinter` that reads a configuration value from the `application.yml` file and prints it to the console when the application starts.
 
 ### `utilities` Module
 
@@ -79,4 +79,4 @@ The `utilities` module is a simple library that can be used by the main applicat
 To run the application, use the following command:
 
 ```sh
-./gradlew :list:run
+./gradlew :app:run

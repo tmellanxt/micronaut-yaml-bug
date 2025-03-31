@@ -1,2 +1,4 @@
 configuration:
   name: library
+value:
+  name: hello
