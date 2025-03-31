@@ -5,10 +5,9 @@ import io.micronaut.context.event.ApplicationEventListener;
 import io.micronaut.context.event.StartupEvent;
 import jakarta.inject.Inject;
 import jakarta.inject.Singleton;
-import java.util.function.Consumer;
 
 @Singleton
-public class OnStartUp implements ApplicationEventListener<StartupEvent> {
+public class ConfigurationPrinter implements ApplicationEventListener<StartupEvent> {
 
   @Inject private ApplicationContext applicationContext;
 
